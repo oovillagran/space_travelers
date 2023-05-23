@@ -25,6 +25,7 @@ const Rockets = () => {
         <div key={rocket.rocket_id}>
           <h2>{rocket.rocket_name}</h2>
           <p>{rocket.rocket_type}</p>
+          <p>{rocket.description}</p>
           <img src={rocket.flickr_images} alt="rocket_image" className="rocket_img" />
         </div>
       ))}
