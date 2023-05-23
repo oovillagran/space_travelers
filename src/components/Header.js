@@ -11,6 +11,7 @@ export default function Header() {
         </div>
         <div className="nav-bar flex">
           <NavLink className="nav-item" to="/">rockets</NavLink>
+          <NavLink className="nav-item" to="/dragons">dragons</NavLink>
           <NavLink className="nav-item" to="/missions">missions</NavLink>
           <NavLink className="nav-item" to="/profile">my profile</NavLink>
         </div>
