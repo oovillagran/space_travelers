@@ -21,10 +21,11 @@ const Rockets = () => {
 
   return (
     <div>
-      {rockets.map((rocket) => (
+      {rockets?.map((rocket) => (
         <div key={rocket.rocket_id}>
-          <h2>{rocket.name}</h2>
-          <p>{rocket.description}</p>
+          <h2>{rocket.rocket_name}</h2>
+          <p>{rocket.rocket_type}</p>
+          <img src={rocket.flickr_images} alt="rocket_image" className="rocket_img" />
         </div>
       ))}
     </div>
