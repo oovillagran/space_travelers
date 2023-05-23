@@ -7,6 +7,7 @@ const store = configureStore({
   reducer: {
     dragons: dragonsReducer,
     missions: missionsReducer,
+    rockets: rocketsReducer,
   },
 });
 

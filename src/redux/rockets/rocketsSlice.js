@@ -1,17 +1,11 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-const url = 'https://api.spacexdata.com/v3/rockets';
+import { createSlice } from '@reduxjs/toolkit';
+import getRockets from '../../components/FetchRockets';
 
 const initialState = {
   rockets: [],
   status: 'idle',
   error: null,
 };
-
-export const getRockets = createAsyncThunk('rockets/getRockets', async () => {
-  const response = await fetch(url);
-  return response.json();
-});
 
 const rocketsSlice = createSlice({
   name: 'rockets',
