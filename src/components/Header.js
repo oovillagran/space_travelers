@@ -11,11 +11,11 @@ export default function Header() {
           <NavLink className="brand-name" to="/">Space Travelers&apos; Hub</NavLink>
         </div>
         <div className="nav-bar flex">
-          <NavLink className="nav-item" exact activeClassName="underline" to="/">Rockets</NavLink>
-          <NavLink className="nav-item" exact activeClassName="underline" to="/dragons">Dragons</NavLink>
-          <NavLink className="nav-item" exact activeClassName="underline" to="/missions">Missions</NavLink>
+          <NavLink className="nav-item" to="/">Rockets</NavLink>
+          <NavLink className="nav-item" to="/dragons">Dragons</NavLink>
+          <NavLink className="nav-item" to="/missions">Missions</NavLink>
           <hr />
-          <NavLink className="nav-item" exact activeClassName="underline" to="/profile">My Profile</NavLink>
+          <NavLink className="nav-item" to="/profile">My Profile</NavLink>
         </div>
       </div>
       <hr />
