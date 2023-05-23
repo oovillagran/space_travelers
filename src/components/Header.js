@@ -6,15 +6,16 @@ export default function Header() {
   return (
     <>
       <div className="header flex">
-        <div className="brand">
+        <div className="brand flex">
           <img src={logo} alt="Logo" className="logo" width="5%" />
-          <NavLink className="brand-name" to="/">space travelers&apos; hub</NavLink>
+          <NavLink className="brand-name" to="/">Space Travelers&apos; Hub</NavLink>
         </div>
         <div className="nav-bar flex">
-          <NavLink className="nav-item" to="/">rockets</NavLink>
-          <NavLink className="nav-item" to="/dragons">dragons</NavLink>
-          <NavLink className="nav-item" to="/missions">missions</NavLink>
-          <NavLink className="nav-item" to="/profile">my profile</NavLink>
+          <NavLink className="nav-item" to="/">Rockets</NavLink>
+          <NavLink className="nav-item" to="/dragons">Dragons</NavLink>
+          <NavLink className="nav-item" to="/missions">Missions</NavLink>
+          <hr />
+          <NavLink className="nav-item" to="/profile">My Profile</NavLink>
         </div>
       </div>
       <hr />
