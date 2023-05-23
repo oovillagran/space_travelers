@@ -1,0 +1,12 @@
+.rocket {
+  margin: 2rem 7.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rocket-img {
+  width: 15rem;
+}
