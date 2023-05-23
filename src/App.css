@@ -3,10 +3,44 @@
 }
 
 .header {
+  align-items: center;
   justify-content: space-between;
+  margin: 12px 24px;
 }
 
 .nav-bar {
-  gap: 2rem;
-  align-items: flex-end;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar a {
+  color: #2f8eff;
+  text-decoration: none;
+}
+
+.nav-item a:after {
+  text-decoration: underline;
+}
+
+.brand {
+  align-items: center;
+}
+
+.brand a {
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+}
+
+.brand img {
+  width: 60px;
+  margin-right: 12px;
+}
+
+hr {
+  width: 2px;
+  border: 0.1px solid black;
+  height: 16px;
+  background: black;
 }
