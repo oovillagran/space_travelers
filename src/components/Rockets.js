@@ -15,8 +15,8 @@ function Rockets() {
   }
   return (
     <>
-      {rockets.map((rocket) => (
-        <h2>{rocket.title}</h2>
+      {rockets.map((item, key) => (
+        <h2 key={key}>{item.id}</h2>
       ))}
     </>
   );
