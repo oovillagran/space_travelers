@@ -44,3 +44,23 @@ hr {
   height: 16px;
   background: black;
 }
+
+table {
+  margin: 12px;
+  width: 95%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+th {
+  margin: 24px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+td {
+  text-align: left;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
