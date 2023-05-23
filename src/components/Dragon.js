@@ -2,7 +2,8 @@ import React from 'react';
 import '../assets/Dragon.css';
 
 const Dragon = () => {
-  console.log('here');
+  // console.log('here');
+  const name = 'Dragon 1';
   return (
     <div className="dragon-container flex">
       <img
@@ -11,7 +12,7 @@ const Dragon = () => {
         alt="Dragon"
       />
       <div className="props-container flex">
-        <h2>Dragon 1</h2>
+        <h2>{name}</h2>
         <div className="type-container flex">
           <button type="button" className="reserved">
             Reserved
