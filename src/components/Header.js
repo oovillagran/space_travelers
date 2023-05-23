@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import '../styles/Header.css';
 
 export default function Header() {
   return (
@@ -16,6 +17,7 @@ export default function Header() {
           <NavLink className="nav-item" to="/profile">my profile</NavLink>
         </div>
       </div>
+      <hr />
     </>
   );
 }
