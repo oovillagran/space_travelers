@@ -1,25 +1,34 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets } from '../redux/rockets/rocketsSlice';
 
-function Rockets() {
-  const [rockets, loading] = useSelector((state) => state.rocket);
-
+const Rockets = () => {
   const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rockets.rockets); // Access 'rockets' correctly
+  const status = useSelector((state) => state.rockets.status); // Access 'status' correctly
+
   useEffect(() => {
     dispatch(getRockets());
-  }, []);
+  }, [dispatch]);
 
-  if (loading) {
-    return <h2>Loading...</h2>;
+  if (status === 'loading') {
+    return <div>Loading...</div>;
   }
+
+  if (status === 'failed') {
+    return <div>Error occurred while fetching rockets.</div>;
+  }
+
   return (
-    <>
-      {rockets.map((item, key) => (
-        <h2 key={key}>{item.id}</h2>
+    <div>
+      {rockets.map((rocket) => (
+        <div key={rocket.id}>
+          <h2>{rocket.name}</h2>
+          <p>{rocket.description}</p>
+        </div>
       ))}
-    </>
+    </div>
   );
-}
+};
 
 export default Rockets;

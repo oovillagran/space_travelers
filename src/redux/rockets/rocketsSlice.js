@@ -2,27 +2,33 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
 
+const initialState = {
+  rockets: [],
+  status: 'idle',
+  error: null,
+};
+
 export const getRockets = createAsyncThunk('rockets/getRockets', async () => {
-  fetch(url).then((response) => response.json());
+  const response = await fetch(url);
+  return response.json();
 });
 
 const rocketsSlice = createSlice({
   name: 'rockets',
-  initialState: {
-    rockets: [],
-    loading: false,
-  },
-  extraReducers: {
-    [getRockets.pending]: (state) => {
-      state.loading = true;
-    },
-    [getRockets.fulfilled]: (state, action) => {
-      state.loading = false;
-      state.rockets = action.payload;
-    },
-    [getRockets.rejected]: (state) => {
-      state.loading = false;
-    },
+  initialState,
+  reducers: {},
+  extraReducers(builder) {
+    builder
+      .addCase(getRockets.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(getRockets.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.rockets = action.payload;
+      })
+      .addCase(getRockets.rejected, (state) => {
+        state.status = 'failed';
+      });
   },
 });
 
