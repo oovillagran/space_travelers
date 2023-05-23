@@ -19,7 +19,7 @@
   text-decoration: none;
 }
 
-.nav-item a:after {
+.nav-item.active {
   text-decoration: underline;
 }
 
