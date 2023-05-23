@@ -1,0 +1,18 @@
+.dragon-container {
+  padding: 10px;
+  gap: 10px;
+}
+
+.img-dragon {
+  width: 200px;
+  height: auto;
+}
+
+.props-container {
+  flex-direction: column;
+  gap: 5px;
+}
+
+.type-container {
+  gap: 10px;
+}

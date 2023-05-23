@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profile from './components/Profile';
-import Dragons from './components/Dragons';
+import DragonsList from './components/DragonsList';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/dragons" element={<Dragons />} />
+          <Route path="/dragons" element={<DragonsList />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
