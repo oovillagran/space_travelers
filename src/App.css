@@ -45,22 +45,66 @@ hr {
   background: black;
 }
 
+.body-hr {
+  border: 0.1px solid #c7c5c5;
+  margin-left: 13px;
+  width: 97%;
+  height: 0.1px;
+}
+
 table {
-  margin: 12px;
+  margin: 24px;
   width: 95%;
   height: 100%;
-  border: 1px solid black;
+  border: 0.1px solid #c7c5c5;
 }
 
 th {
-  margin: 24px;
+  padding: 12px;
   text-align: left;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border: 0.1px solid #c7c5c5;
 }
 
 td {
+  padding: 6px;
   text-align: left;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border: 0.1px solid #c7c5c5;
+}
+
+tr:nth-child(even) {
+  background: #ebebeb;
+}
+
+.mission-name {
+  position: relative;
+  width: 12%;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.mission-description {
+  width: 64%;
+  padding-bottom: 18px;
+}
+
+.mission-status {
+  width: 12%;
+  text-align: center;
+}
+
+.mission-status p {
+  
+  padding: 3px;
+  color: white;
+  border-radius: 2px;
+  background: #6d757d;
+}
+
+.mission-join {
+  width: 12%;
+  text-align: center;
+}
+
+.mission-join button {
+  padding: 4px;
 }

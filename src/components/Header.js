@@ -18,7 +18,7 @@ export default function Header() {
           <NavLink className="nav-item" to="/profile">My Profile</NavLink>
         </div>
       </div>
-      <hr />
+      <hr className="body-hr" />
     </>
   );
 }
