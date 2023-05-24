@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'https://api.spacexdata.com/v3/dragons';
+const API_URL = 'https://api.spacexdata.com/v4/dragons';
 
 export const fetchDragonData = createAsyncThunk(
   'dragons/fetchDragonData',
