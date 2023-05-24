@@ -2,17 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/Dragon.css';
 import { useDispatch } from 'react-redux';
-import { reserveDragon } from '../redux/dragons/dragonsSlice';
+import { reserveDragon, canelDragon } from '../redux/dragons/dragonsSlice';
 
 const Dragon = ({ dragon }) => {
   const {
     id, name, type, flickrImage, reserved,
   } = dragon;
-  // const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
 
   const handleReserve = () => {
     dispatch(reserveDragon(id));
+  };
+
+  const handleCancel = () => {
+    dispatch(canelDragon(id));
   };
 
   return (
@@ -39,7 +42,7 @@ const Dragon = ({ dragon }) => {
         </div>
         <button
           type="button"
-          onClick={handleReserve}
+          onClick={reserved ? handleCancel : handleReserve}
           className={reserved ? 'reserve unreserve' : 'reserve'}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
@@ -55,7 +58,7 @@ Dragon.propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     flickrImage: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    reserved: PropTypes.bool,
   }).isRequired,
 };
 

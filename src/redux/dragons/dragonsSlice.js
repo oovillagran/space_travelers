@@ -35,6 +35,12 @@ export const dragonsSlice = createSlice({
         dragon.id !== id ? dragon : { ...dragon, reserved: true }));
       return { ...state, dragonsItems: newDragon };
     },
+    canelDragon: (state, action) => {
+      const id = action.payload;
+      const newDragon = state.dragonsItems.map((dragon) => (
+        dragon.id !== id ? dragon : { ...dragon, reserved: false }));
+      return { ...state, dragonsItems: newDragon };
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -54,6 +60,6 @@ export const dragonsSlice = createSlice({
   },
 });
 
-export const { reserveDragon } = dragonsSlice.actions;
+export const { reserveDragon, canelDragon } = dragonsSlice.actions;
 
 export default dragonsSlice.reducer;
