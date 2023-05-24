@@ -1,11 +1,18 @@
 .dragon-container {
-  padding: 10px;
-  gap: 10px;
+  padding: 0.625rem;
+  gap: 0.625rem;
+  box-shadow: 1px 1px 5px 4px inset #8F969C50;
+  margin: 0.3125rem;
+  width: 100%;
 }
 
 .img-dragon {
-  width: 200px;
+  width: 18.75rem;
   height: auto;
+}
+
+.dragon-name {
+  font-size: 1.5rem;
 }
 
 .props-container {
@@ -14,5 +21,44 @@
 }
 
 .type-container {
-  gap: 10px;
+  gap: 0.625rem;
+}
+
+.reserve {
+  background-color: #3A74FE;
+  transition: all 300ms ease-in-out;
+  color: #fff;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.reserve:hover {
+  background-color: #3A74FE70;
+}
+
+.unreserve {
+  background-color: #fff;
+  color: #8F969C;
+  border: 1px solid #8F969C;
+}
+
+.unreserve:hover {
+  background-color: #525558;
+  color: #fff;
+}
+
+.reserved {
+  background-color: #18A2B8;
+  color: #fff;
+  margin: 0;
+  padding: 0 0.25rem;
+  border: none;
+  font-size: 0.75rem;
+  border-radius: 0.4375rem;
+  height: fit-content;
+  transition: all 300ms ease-in-out;
 }
