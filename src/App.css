@@ -104,6 +104,12 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+#leave-mission {
+  color: red;
+  border-radius: 2px;
+  border: 1px solid red;
+}
+
 .mission-join button {
   padding: 4px;
 }

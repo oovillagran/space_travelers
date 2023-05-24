@@ -10,12 +10,22 @@ export const missionsSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state, action) => {
-      state.missions.map((mission) => {
-        if (mission.mission_id !== action.payload) {
+      const newState = state.missions.filter((mission) => {
+        if (mission.mission_id === action.payload) {
+          mission.reserved = true;
           return mission;
-        }
-        return { ...mission, reserved: true };
+        } return mission;
       });
+      state.missions = newState;
+    },
+    leaveMision: (state, action) => {
+      const newState = state.missions.filter((mission) => {
+        if (mission.mission_id === action.payload) {
+          mission.reserved = false;
+          return mission;
+        } return mission;
+      });
+      state.missions = newState;
     },
   },
   extraReducers: (builder) => {
@@ -27,6 +37,6 @@ export const missionsSlice = createSlice({
   },
 });
 
-export const { joinMission } = missionsSlice.actions;
+export const { joinMission, leaveMision } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
