@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/Dragon.css';
+import { useDispatch } from 'react-redux';
+import { reserveDragon } from '../redux/dragons/dragonsSlice';
 
 const Dragon = ({ dragon }) => {
-  const { name, type, flickrImage } = dragon;
+  const {
+    id, name, type, flickrImage, reserved,
+  } = dragon;
+  // const dragons = useSelector((state) => state.dragons);
+  const dispatch = useDispatch();
+
+  const handleReserve = () => {
+    dispatch(reserveDragon(id));
+  };
 
   return (
     <div className="dragon-container flex">
@@ -23,9 +33,24 @@ const Dragon = ({ dragon }) => {
             {type.toUpperCase()}
           </p>
         </div>
-        <button type="button" className="reserve">
-          Reserve Dragon
-        </button>
+        {reserved
+          ? (
+            <button
+              type="button"
+              className="reserve unreserve"
+            >
+              Cancel Reservation
+            </button>
+          )
+          : (
+            <button
+              onClick={handleReserve}
+              type="button"
+              className="reserve"
+            >
+              Reserve Dragon
+            </button>
+          )}
       </div>
     </div>
   );
@@ -33,9 +58,11 @@ const Dragon = ({ dragon }) => {
 
 Dragon.propTypes = {
   dragon: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     flickrImage: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
