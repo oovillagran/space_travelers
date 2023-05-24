@@ -99,6 +99,10 @@ tr:nth-child(even) {
   background: #6d757d;
 }
 
+.mission-status .active-member {
+  background: #18a2b8;
+}
+
 .mission-join {
   width: 12%;
   text-align: center;

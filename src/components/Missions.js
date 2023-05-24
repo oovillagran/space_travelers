@@ -26,7 +26,7 @@ const Missions = () => {
             <td className="mission-description">{mission.description}</td>
             <td className="mission-status">
               {mission.reserved
-                ? <p>Active Member</p>
+                ? <p className="active-member">Active Member</p>
                 : <p>NOT A MEMBER</p>}
             </td>
             <td className="mission-join">
