@@ -1,7 +1,7 @@
 .dragon-container {
   padding: 0.625rem;
   gap: 0.625rem;
-  box-shadow: 1px 1px 5px 4px inset #8F969C50;
+  box-shadow: 1px 1px 5px 4px inset #8f969c50;
   margin: 0.3125rem;
   width: 100%;
 }
@@ -25,7 +25,7 @@
 }
 
 .reserve {
-  background-color: #3A74FE;
+  background-color: #3a74fe;
   transition: all 300ms ease-in-out;
   color: #fff;
   padding: 6px 8px;
@@ -37,13 +37,13 @@
 }
 
 .reserve:hover {
-  background-color: #3A74FE70;
+  background-color: #3a74fe70;
 }
 
 .unreserve {
   background-color: #fff;
-  color: #8F969C;
-  border: 1px solid #8F969C;
+  color: #8f969c;
+  border: 1px solid #8f969c;
 }
 
 .unreserve:hover {
@@ -52,7 +52,7 @@
 }
 
 .reserved {
-  background-color: #18A2B8;
+  background-color: #18a2b8;
   color: #fff;
   margin: 0;
   padding: 0 0.25rem;
