@@ -25,32 +25,25 @@ const Dragon = ({ dragon }) => {
       <div className="props-container flex">
         <h2 className="dragon-name">{name}</h2>
         <div className="type-container flex">
-          <p className="reserved">
-            Reserved
-          </p>
+          {reserved
+            ? (
+              <p className="reserved">
+                Reserved
+              </p>
+            )
+            : ' '}
           <p className="txt-type">
             <strong>Type: </strong>
             {type.toUpperCase()}
           </p>
         </div>
-        {reserved
-          ? (
-            <button
-              type="button"
-              className="reserve unreserve"
-            >
-              Cancel Reservation
-            </button>
-          )
-          : (
-            <button
-              onClick={handleReserve}
-              type="button"
-              className="reserve"
-            >
-              Reserve Dragon
-            </button>
-          )}
+        <button
+          type="button"
+          onClick={handleReserve}
+          className={reserved ? 'reserve unreserve' : 'reserve'}
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+        </button>
       </div>
     </div>
   );
