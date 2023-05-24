@@ -28,7 +28,7 @@ const DragonsList = () => {
 
   return (
     <div className="dragon-list flex">
-      {dragonsItems.map((dragon) => (
+      {dragonsItems?.map((dragon) => (
         <Dragon key={dragon.id} dragon={dragon} />
       ))}
     </div>
