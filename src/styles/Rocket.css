@@ -10,3 +10,19 @@
 .rocket-img {
   width: 15rem;
 }
+
+.reserve-btn {
+  width: 12rem;
+  text-transform: capitalize;
+  padding: 0.25rem;
+  background-color: #097de3;
+  border-radius: 5px;
+  color: #fff;
+  border: #097de3;
+}
+
+.cancel {
+  color: #7f7c7c;
+  background-color: #fff;
+  border: #7f7c7c 2px solid;
+}
