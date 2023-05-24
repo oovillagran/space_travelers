@@ -55,10 +55,8 @@
   background-color: #18a2b8;
   color: #fff;
   margin: 0;
-  padding: 0 0.25rem;
+  padding: 0.25rem;
   border: none;
   font-size: 0.75rem;
   border-radius: 0.4375rem;
-  height: fit-content;
-  transition: all 300ms ease-in-out;
 }
