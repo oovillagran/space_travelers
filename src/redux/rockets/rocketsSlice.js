@@ -18,6 +18,7 @@ const rocketsSlice = createSlice({
       return { ...state, rockets: newRockets };
     },
   },
+
   extraReducers(builder) {
     builder
       .addCase(getRockets.pending, (state) => {
