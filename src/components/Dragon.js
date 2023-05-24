@@ -13,18 +13,18 @@ const Dragon = ({ dragon }) => {
         alt={name}
       />
       <div className="props-container flex">
-        <h2>{name}</h2>
+        <h2 className="dragon-name">{name}</h2>
         <div className="type-container flex">
-          <button type="button" className="reserved">
+          <p className="reserved">
             Reserved
-          </button>
+          </p>
           <p className="txt-type">
             <strong>Type: </strong>
-            {type}
+            {type.toUpperCase()}
           </p>
         </div>
-        <button type="button" className="Reserve">
-          Reserve Rocket
+        <button type="button" className="reserve">
+          Reserve Dragon
         </button>
       </div>
     </div>
