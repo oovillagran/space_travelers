@@ -99,11 +99,37 @@ tr:nth-child(even) {
   background: #6d757d;
 }
 
+.mission-status .active-member {
+  background: #18a2b8;
+}
+
 .mission-join {
   width: 12%;
   text-align: center;
 }
 
+#leave-mission {
+  color: red;
+  border-radius: 2px;
+  border: 1px solid red;
+}
+
 .mission-join button {
   padding: 4px;
+}
+
+.my-profile {
+  margin: 12px;
+}
+
+.my-profile h2 {
+  margin: 12px 0;
+}
+
+.my-profile li {
+  list-style: none;
+  border-radius: 2px;
+  border: 1px solid #dfdfdf;
+  width: 40%;
+  padding: 12px 12px 24px;
 }
