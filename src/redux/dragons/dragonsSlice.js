@@ -32,8 +32,8 @@ export const dragonsSlice = createSlice({
     reserveDragon: (state, action) => {
       const id = action.payload;
       const newDragon = state.dragonsItems.map((dragon) => (
-        dragon.id !== id ? { ...dragon, reserved: false } : { ...dragon, reserved: true }));
-      return { ...state, dragons: newDragon };
+        dragon.id !== id ? dragon : { ...dragon, reserved: true }));
+      return { ...state, dragonsItems: newDragon };
     },
   },
   extraReducers: (builder) => {
