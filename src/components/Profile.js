@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 const Profile = () => {
   const missions = useSelector((state) => state.missions.missions);
   const joinedMissions = missions.filter((mission) => mission.reserved === true);
+  const { dragonsItems } = useSelector((state) => state.dragons);
+  const joinedDragons = dragonsItems.filter((dragon) => dragon.reserved === true);
+
   const rockets = useSelector((state) => state.rockets.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
   return (
@@ -18,6 +21,18 @@ const Profile = () => {
           ))}
         </ul>
       </div>
+      {joinedDragons.length > 0 ? (
+        <div>
+          <h2>My Dragons</h2>
+          <ul>
+            {joinedDragons.map((dragon) => (
+              <li key={dragon.id}>
+                {dragon.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : <div />}
       <div>
         <h2>My Rockets</h2>
         <ul>
