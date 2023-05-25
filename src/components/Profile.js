@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
@@ -6,6 +7,8 @@ const Profile = () => {
   const { dragonsItems } = useSelector((state) => state.dragons);
   const joinedDragons = dragonsItems.filter((dragon) => dragon.reserved === true);
 
+  const rockets = useSelector((state) => state.rockets.rockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <div className="my-profile">
       <div>
@@ -30,6 +33,20 @@ const Profile = () => {
           </ul>
         </div>
       ) : <div />}
+      <div>
+        <h2>My Rockets</h2>
+        <ul>
+          { reservedRockets.length > 0 ? (
+            reservedRockets.map((rocket) => (
+              <li key={rocket.rocket_id}>
+                {rocket.rocket_name}
+              </li>
+            ))
+          ) : (
+            <li>no bookings</li>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };
