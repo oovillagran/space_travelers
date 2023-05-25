@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite for the Header component Should render a snapshot of the Header component 1`] = `
+<a
+  aria-current="page"
+  class="brand-name active"
+  href="/"
+>
+  Space Travelers' Hub
+</a>
+`;
