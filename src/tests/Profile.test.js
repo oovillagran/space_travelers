@@ -1,11 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
-import Profile from "../components/Profile";
-import "@testing-library/jest-dom/extend-expect";
-import store from "../redux/store";
-import { Provider } from "react-redux";
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import '@testing-library/jest-dom/extend-expect';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import Profile from '../components/Profile';
 
-describe("Test suite for the Profile component", () => {
+describe('Test suite for the Profile component', () => {
   let profile;
   beforeEach(() => {
     render(
@@ -13,12 +13,12 @@ describe("Test suite for the Profile component", () => {
         <Provider store={store}>
           <Profile />
         </Provider>
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     profile = screen.getByText(/My Missions/i);
   });
 
-  it("Should render a snapshot of the Profile component", () => {
+  it('Should render a snapshot of the Profile component', () => {
     expect(profile).toMatchSnapshot();
   });
 });
