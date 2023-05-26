@@ -1,0 +1,5 @@
+.dragon-list {
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 10px;
+}
