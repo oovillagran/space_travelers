@@ -14,7 +14,7 @@ const Missions = () => {
   return (
     <div>
       <table>
-        <tr>
+        <tr data-testid="missions">
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
